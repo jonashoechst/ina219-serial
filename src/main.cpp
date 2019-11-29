@@ -27,7 +27,7 @@ void loop() {
     current_mA = ina219.getCurrent_mA();
     power_mW = ina219.getPower_mW();
 
-    Serial.printf("%i,%5.3f,%f,%f,%f\n", time_ms, shunt_mV, bus_V, current_mA,
+    Serial.printf("%lu,%5.3f,%f,%f,%f\n", time_ms, shunt_mV, bus_V, current_mA,
                   power_mW);
 
     delay((time_ms + INTERVAL_MS) - millis());
